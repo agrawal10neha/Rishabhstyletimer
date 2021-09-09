@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/mainll"
+        android:orientation="vertical"
+        android:layout_marginStart="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/llLocation"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/bg_dashboard_cell">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_drop_location_pin"
+                app:tint="@color/blue"
+                android:layout_marginLeft="@dimen/dp_5"
+                />
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location, Street or postcode"
+                    android:textColor="@color/font_grey"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:textSize="12.12sp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/font_black"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:textSize="14.1sp"
+                    android:id="@+id/tvLocationDistance"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_11"
+            android:id="@+id/llTime"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/bg_dashboard_cell">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_date_calander"
+                app:tint="@color/blue"
+                android:layout_marginLeft="@dimen/dp_5"/>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search for a treatment"
+                    android:textColor="@color/font_grey"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:textSize="12.12sp"
+                    android:letterSpacing="0.4"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/any_time"
+                    android:textColor="@color/font_black"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:textSize="14.1sp"
+                    android:id="@+id/tvDateTime"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/mainll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/tvFilter"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_filter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="@string/filter_by_price_rating"
+                android:fontFamily="@font/helvetica_regular"
+                android:textSize="12.12sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/orange"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:id="@+id/llChangeView"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_map_pin"
+                android:id="@+id/ivChangeView"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="@string/map"
+                android:fontFamily="@font/helvetica_regular"
+                android:textSize="12.12sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/orange"
+                android:id="@+id/tvChangeView"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</layout>

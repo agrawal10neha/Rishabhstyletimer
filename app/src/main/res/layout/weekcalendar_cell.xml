@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="WeekCalendarModel"
+            type="com.si.styletimer.models.WeekCalendarModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llMain"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_5"
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:hint="Mo"
+            android:textColor="@color/font_grey"
+            android:textSize="16sp" />
+        <!-- android:text="@{WeekCalendarModel.day.trim()}"-->
+        <LinearLayout
+            android:id="@+id/llDate"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:hint="10"
+                android:text="@{WeekCalendarModel.date.trim()}"
+                android:textColor="@color/font_grey"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

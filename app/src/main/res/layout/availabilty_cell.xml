@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout><data>
+    <variable
+        name="VenueModel"
+        type="com.si.styletimer.models.venu_model.VenueModel"/>
+</data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:src="@drawable/ic_ring_gradient"
+        android:id="@+id/ivRing"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:gravity="center"
+        android:textSize="14.4sp"
+        android:text="Monday"
+        android:layout_marginLeft="@dimen/dp_36"
+        android:textColor="@color/font_grey"
+        android:fontFamily="@font/helvetica_regular"
+        android:id="@+id/tvDay"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14.4sp"
+        android:text="-"
+        android:gravity="right"
+        android:paddingRight="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_36"
+        android:textColor="@color/font_grey"
+        android:fontFamily="@font/helvetica_regular"
+        android:id="@+id/tvTime"/>
+
+</LinearLayout></layout>

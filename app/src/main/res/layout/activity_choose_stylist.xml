@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data></data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".activity.ChooseStylistActivity">
+
+        <LinearLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:elevation="@dimen/dp_5"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/dp_8"
+                android:src="@drawable/ic_back" />-->
+
+            <ImageView
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/ic_circle_ripple"
+                android:background="@drawable/ic_back_round"
+                android:tint="@color/colorAccent"
+                android:id="@+id/ivClose"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="@string/choose_your_stylist"
+                android:textColor="@android:color/white"
+                android:textSize="20.2sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/tool"
+            android:layout_width="match_parent"
+            android:id="@+id/recystyle"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/dp_80"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:id="@+id/tvolisting"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardElevation="@dimen/dp_10"
+            android:id="@+id/cvButton">
+
+            <Button
+                android:layout_margin="@dimen/dp_20"
+                android:id="@+id/btNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_login_gradient"
+                android:gravity="center"
+                android:text="@string/select_your_date_and_time"
+                android:textColor="@android:color/white" />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".activity.MyBookingActivity">
+
+        <RelativeLayout
+            android:id="@+id/rltool"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:elevation="@dimen/dp_5"
+            android:background="@color/colorPrimaryDark">
+
+            <!--<ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:padding="@dimen/dp_2"
+                android:src="@drawable/ic_back" />-->
+
+            <ImageView
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/ic_circle_ripple"
+                android:background="@drawable/ic_back_round"
+                android:id="@+id/ivClose"
+                android:layout_centerVertical="true"
+                app:tint="@color/colorAccent" />
+
+            <TextView
+                android:layout_toRightOf="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="@string/my_bookings"
+                android:textColor="@android:color/white"
+                android:textSize="20.2sp"
+                android:fontFamily="@font/helvetica"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/ivSetting"
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_settings"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="top"
+                android:textSize="14.14sp"
+                app:tabIndicatorColor="#1400B3BE"
+                app:tabIndicatorHeight="@dimen/dp_47"
+                app:tabTextColor="#00B3BE"
+                app:elevation="@dimen/dp_4"/>
+
+        </androidx.cardview.widget.CardView>
+
+<!--
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C4C4C4" />
+-->
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

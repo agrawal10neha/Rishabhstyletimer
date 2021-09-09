@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout><data>
+    <variable
+        name="Sercvice"
+        type="com.si.styletimer.models.categoryListing.Sercvice"/>
+</data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="@dimen/dp_240"
+            android:layout_height="wrap_content"
+            android:text="Ladies’ Waxing - Face"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="16.16sp"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/helvetica_regular"
+            android:id="@+id/tvCatName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starting from €6"
+            android:maxLines="1"
+            android:textSize="14.2sp"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/helvetica_regular"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tvCatPrice"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Min."
+            android:maxLines="1"
+            android:textSize="12.12sp"
+            android:textColor="@color/font_grey"
+            android:fontFamily="@font/helvetica_regular"
+            android:id="@+id/tvCatDistance"/>
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/tvsaveupto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:text="Save "
+            android:textColor="#00B3BE"
+            android:textSize="14.2sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+</layout>

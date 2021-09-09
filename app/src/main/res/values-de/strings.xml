@@ -1,0 +1,275 @@
+<resources>
+    <string name="app_name">styletimer</string>
+    <array name="autosize_text_sizes">
+        <item>16sp</item>
+        <item>18sp</item>
+        <item>20sp</item>
+        <item>22sp</item>
+        <item>24sp</item>
+    </array>
+    <array name="autosize_text_sizes_title">
+        <item>34sp</item>
+        <item>36sp</item>
+        <item>38sp</item>
+        <item>40sp</item>
+        <item>42sp</item>
+    </array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test_map">Map</string>
+    <string name="default_notification_channel_id">Default</string>
+    <string name="facebook_app_id">649672478814493</string>
+    <string name="fb_login_protocol_scheme">fb649672478814493</string>
+    <dimen name="app_bar_height">170dp</dimen>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="action_settings">Einstellungen</string>
+
+    <string name="label_select_picture">Profilbild wählen</string>
+    <string name="toast_cannot_retrieve_selected_image">Das ausgewählte Bild kann nicht angezeigt werden</string>
+    <string name="toast_cannot_retrieve_cropped_image">Der ausgewählte Bildausschnitt kann nicht angezeigt werden</string>
+    <string name="toast_unexpected_error">Unerwarteter Fehler</string>
+    <string name="pic_not_taken_error">Es wurde kein Foto aufgenommen!</string>
+    <string name="settings">Einstellungen</string>
+    <string name="cancel">STORNIEREN</string>
+    <string name="permission_message">Du hast dieser App erforderliche Berechtigungen verweigert. Bitte öffne deine Einstellungen, gehe zu Berechtigungen und erlaube styletimer den Zugriff auf deinen Standort.</string>
+
+    <string name="alert">Durch das Bestätigen deiner Buchung erklärst du dich mit unseren <font fgcolor='#E9744E'><u>Nutzungsbedingungen</u> </font> einverstanden</string>
+    <string name="fav_msg">Du hast noch keine Favoriten hinzugefügt</string>
+
+    <string name="salon_msg">Es gibt keinen Salon, der Ihrem Datum oder Ihren Kriterien entspricht</string>
+    <string name="largetext">k</string>
+
+
+    <string name="notification_image_saved">Quittung gespeichert</string>
+    <string name="notification_image_saved_click_to_preview">Quittung gespeichert. Klicke hier, um dir eine Vorschau anzusehen.</string>
+    <string name="channel_name">ucrop_chanel</string>
+    <string name="channel_description">ucrop result image</string>
+    <string name="reschedule">UMBUCHEN</string>
+    <string name="notlisteed">Dein Salon nicht dabei? <font fgcolor='#00B3BE'> <u>Salon vorschlagen</u> </font></string>
+    <string name="your_registration">Deine Registrierung war erfolgreich.</string>
+    <string name="click_on_the_link">Bitte klicke auf den Link, den wir dir zu Aktivierung deines Accounts an die angegebene E-Mail Adresse gesendet haben.</string>
+    <string name="canceltext"><b>Bitte buche verantwortungsvoll.</b> Für die auf styletimer gelisteten Salons ist ein Nichterscheinen, oder eine sehr kurzfristige Stornierung mit Problemen verbunden. Bitte verlege oder storniere deine Buchung daher rechtzeitig über styletimer, falls du deinen gebuchten Termin doch nicht wie geplant wahrnehmen kannst.</string>
+    <string name="my_bookings">Meine Buchungen</string>
+    <string name="my_favourites">Meine Favoriten</string>
+    <string name="search_for_salon_name">Name des Salons</string>
+    <string name="all_treatments">Alle Behandlungen</string>
+    <string name="last_searched_salon">Last Searched Salon</string>
+    <string name="oops_no_salon_is_found">Keine Salons gefunden</string>
+    <string name="want_your_salon_to_be_on_styletimer">Du willst deinen Salon bei styletimer?</string>
+    <string name="add_your_salon">Salon vorschlagen</string>
+    <string name="add_salon">Salon vorschlagen</string>
+    <string name="your_name">Dein Name</string>
+    <string name="name_of_salon">Name des Salons</string>
+    <string name="city_of_salon">Stadt des Salons</string>
+    <string name="save">Vorschlagen</string>
+    <string name="saveto">spare</string>
+    <string name="thank_you_for_your_review">Danke für deine Bewertung.</string>
+    <string name="go_to_booking">Weiter zu Buchungen</string>
+   <!-- <string name="looking_for_a_booking">Du suchst nach einer Buchung?</string>-->
+    <string name="looking_for_a_booking">Buche was du willst, wann\nimmer du willst!</string>
+    <string name="manage_your_existing_bookings_nby_signing_in_to_the_app">Dein Style in einer App</string>
+    <string name="log_in">Einloggen</string>
+    <string name="or">ODER</string>
+    <string name="new_to_styletimer">Neu bei styletimer?</string>
+    <string name="google">GOOGLE</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="create_new_account">Registriere dich jetzt!</string>
+    <string name="by_continuing_you_agree_to">Durch Fortfahren akzeptierst du unsere</string>
+    <string name="terms_amp_conditions"><![CDATA[Nutzungsbedingungen.]]></string>
+    <string name="email">E-Mail Adresse</string>
+    <string name="password">Passwort</string>
+    <string name="forgot_password">Passwort vergessen?</string>
+    <string name="reset_your_password">Passwort zurücksetzen</string>
+    <string name="forgot_your_password">Passwort vergessen?</string>
+    <string name="enter_your_email_amp_will_send_you_a_link_nto_reset_your_password"><![CDATA[Gib deine E-Mail Adresse ein & du erhältst einen Link zum\nZurücksetzen deines Passworts]]></string>
+    <string name="next">Weiter</string>
+    <string name="please_enter_valid_email">Bitte E-Mail Adresse eingeben</string>
+    <string name="email_sent">E-Mail versendet</string>
+    <string name="please_check_your_registered_email_for_password_reset_instructions">Bitte überprüfe deinen Posteingang.\nDer Link wurde an dich gesendet.</string>
+    <string name="log_in_again">Erneut einloggen</string>
+    <string name="create_your_account">Registrieren</string>
+    <string name="first_name">Vorname</string>
+    <string name="last_name">Nachname</string>
+    <string name="date_of_birth">Geburtsdatum</string>
+    <string name="confirm_password">Passwort bestätigen</string>
+    <string name="receive_newsletter_from_styletimer">Newsletter von styletimer erhalten</string>
+    <string name="tick_to_allow_the_venue_i_m_booking_with_to_send_me_emails_and_sms_about_their_services">Erlaube Salons, dir E-Mails und Benachrichtigungen über Services zu senden.</string>
+    <string name="you_can_change_your_preferences_at_anytime_find_out_how_in_our_privacy_policy">Du kannst diese Einstellungen später jederzeit ändern</string>
+    <string name="sign_up">Registrieren</string>
+    <string name="please_enter_firstname">Bitte Vorname eingeben</string>
+    <string name="please_enter_lastname">Bitte Nachname eingeben</string>
+    <string name="please_enter_dob">Wähle ein Geburtsdatum</string>
+    <string name="please_enter_password">Bitte Passwort eingeben</string>
+    <string name="confirm_password_not_match">Bitte Passwort bestätigen</string>
+    <string name="please_check_term_and_condition">Um dich zu registrieren, musst du unseren Datenschutzbestimmungen und unseren Nutzungsbedingungen zustimmen</string>
+    <string name="my_profile">Mein Profil</string>
+    <string name="remove_picture">Profilbild entfernen</string>
+    <string name="telephone">Telefon</string>
+    <string name="street">Straße &amp; Hausnummer</string>
+    <string name="select_country">Land</string>
+    <string name="city">Stadt</string>
+    <string name="postcode">Postleitzahl</string>
+    <string name="select_gender">Geschlecht</string>
+    <string name="newsletter_subscription">Newsletter Subscription.</string>
+    <string name="save_changes">ÄNDERUNGEN SPEICHERN</string>
+    <string name="change_password">Passwort zurücksetzen</string>
+    <string name="old_password">Altes Passwort</string>
+    <string name="new_password">Neues Passwort</string>
+    <string name="update_password">PASSWORT ZURÜCKSETZEN</string>
+    <string name="please_enter_old_pass">Bitte altes Passwort eingeben</string>
+    <string name="please_enter_new_password">Bitte neues Passwort eingeben</string>
+    <string name="password_successfully_changed">Passwort erfolgreich geändert</string>
+    <string name="select_action">Profilbild hochladen</string>
+    <string name="select_gallery">Aus Galerie hochladen</string>
+    <string name="select_camara">Kamera öffnen</string>
+    <string name="my_favourite">Meine Favoriten</string>
+    <string name="your_favourite">Als Favorit entfernen</string>
+    <string name="are_you_remove_favourite">Bist du sicher, dass du diesen Salon aus deinen Favoriten entfernen möchtest?</string>
+    <string name="upcoming_booking">Anstehende Buchungen</string>
+    <string name="recent_booking">Vergangene Buchungen</string>
+    <string name="rebook">NOCHMAL BUCHEN</string>
+    <string name="review">BEWERTEN</string>
+    <string name="rate_and_review">Bewertung abgeben</string>
+    <string name="rate_your_overall_experience">Bewerte deinen Besuch</string>
+    <string name="write_review">Bewertung schreiben</string>
+    <string name="review_as_anonymous">Anonym bewerten</string>
+    <string name="submit_review">Bewertung abgeben</string>
+    <string name="please_select_your_rating">Bitte wähle eine Sternebewertung.</string>
+    <string name="booking_details">Buchungsdetails</string>
+    <string name="services">Behandlung</string>
+    <string name="employee">Mitarbeiter</string>
+    <string name="discount">Rabatt</string>
+    <string name="total_amount">Gesamt</string>
+    <string name="call_salon_number">Salon anrufen</string>
+    <string name="salon_profile">Salonprofil</string>
+    <string name="salon_address">Salonadresse</string>
+    <string name="view_map">Auf Karte anzeigen</string>
+    <string name="view_receipt">Quittung ansehen</string>
+    <string name="your_rating_amp_review"><![CDATA[Bewertung abgeben]]></string>
+    <string name="your_rating_amp_review_after">Deine Bewertung:</string>
+    <string name="your_rating_here">your rating here</string>
+    <string name="click_to_view_your_review">click to view your review</string>
+    <string name="cancel_booking">Buchung stornieren</string>
+    <string name="are_you_sure_cancel_booking">Bitte wähle einen Stornierungsgrund:</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="other">andere</string>
+    <string name="booked_accidentally">irrtümlich gebucht</string>
+    <string name="no_time">ich habe keine Zeit</string>
+    <string name="sick">krankheitsbedingt</string>
+    <string name="are_you_sure_you_want_to_reschedule_this_booking">Bist du sicher, dass du diese Buchung verlegen möchtest?</string>
+    <string name="reason_for_cancellation_of_booking">Grund der Stornierung</string>
+    <string name="map">Karte</string>
+    <string name="show_all_services">Zeige alle Behandlungen</string>
+    <string name="disstance">Entfernung: </string>
+    <string name="filter_by_price_rating">Filtern nach Preis, Bewertung…</string>
+    <string name="list">Liste</string>
+    <string name="salon_found"> Salons gefunden </string>
+    <string name="near_you">in deiner Nähe</string>
+    <string name="within_0_2_km">Umkreis 0.2 km</string>
+    <string name="within_0_5_km">Umkreis 0.5 km</string>
+    <string name="within_1_km">Umkreis 1 km</string>
+    <string name="within_3_km">Umkreis 3 km</string>
+    <string name="within_5_km">Umkreis 5 km</string>
+    <string name="within_10_km">Umkreis 10 km</string>
+    <string name="within_20_km">Umkreis 20 km</string>
+    <string name="apply">ANWENDEN</string>
+    <string name="any_time">Beliebige Zeit</string>
+    <string name="date">Datum</string>
+    <string name="any_date">Beliebig Datum</string>
+    <string name="today">Heute</string>
+    <string name="tomorrow">Morgen</string>
+    <string name="choose_date">Datum wählen</string>
+    <string name="time">Uhrzeit</string>
+    <string name="sort">Sortieren nach</string>
+    <string name="all">Alle</string>
+    <string name="max_price">Maximalpreis</string>
+    <string name="any_price">Beliebig</string>
+    <string name="express_offer_2_hours_or_less">Express-Buchungen (nächste 2 Stunden \noder weniger)</string>
+    <string name="apply_filters">FILTER ANWENDEN</string>
+    <string name="check_availability">VERFÜGBARKEIT ÜBERPRÜFEN</string>
+    <string name="venue_details">Salondetails</string>
+    <string name="show_details">Details</string>
+    <string name="service_details">Service Details</string>
+    <string name="full_menu">MENÜ</string>
+    <string name="save_up_to">spare bis</string>
+    <string name="from">ab</string>
+    <string name="directions">Navigation</string>
+    <string name="opening_hours">Öffnungszeiten</string>
+    <string name="employee_list">Mitarbeiter</string>
+    <string name="description">Beschreibung</string>
+    <string name="monday">Montag</string>
+    <string name="tuesday">Dienstag</string>
+    <string name="wednesday">Mittwoch</string>
+    <string name="thursday">Donnerstag</string>
+    <string name="friday">Freitag</string>
+    <string name="saturday">Samstag</string>
+    <string name="sunday">Sonntag</string>
+    <string name="closed">Geschlossen</string>
+    <string name="show_reviews">Service Bewertungen</string>
+    <string name="about_this_service">Service Beschreibung </string>
+    <string name="service_reviews">Service Bewertungen </string>
+    <string name="close">Schließen</string>
+    <string name="anonymous">Anonym :</string>
+    <string name="treated_by">Behandelt von </string>
+    <string name="show">Zeige</string>
+    <string name="continue1">WEITER</string>
+    <string name="choose_your_stylist">Wähle einen Mitarbeiter</string>
+    <string name="select_your_date_and_time">DATUM &amp; UHRZEIT WÄHLEN</string>
+    <string name="first_available_stylist">Nächster freier Mitarbeiter</string>
+    <string name="see_all_available">Alle verfügbaren Termine anzeigen</string>
+    <string name="add_another_service">Weiteren Service hinzufügen</string>
+    <string name="add_note">Notiz hinzufügen</string>
+    <string name="add_a_note">Füge deiner Buchung eine Nachricht hinzu</string>
+    <string name="confirm_booking">BUCHUNG BESTÄTIGEN</string>
+    <string name="thank_you">Vielen Dank!</string>
+    <string name="thank_you_two">Termin erfolgreich gebucht!</string>
+    <string name="go_to_home">ZUR STARTSEITE</string>
+    <string name="confirmed">Bestätigt</string>
+    <string name="cancelled">Storniert</string>
+    <string name="completed">Fertig</string>
+    <string name="no_show">Nicht Erschienen</string>
+    <string name="please_wait">Bitte warten...</string>
+    <string name="highest_rated">Höchste Bewertung</string>
+    <string name="lowest_price">Niedrigste Bewertung</string>
+    <string name="closest_to_location">Geringste Entfernung</string>
+    <string name="most_reviews">Meiste Bewertungen</string>
+    <string name="sort_by">Sortieren nach</string>
+    <string name="enter_location_street_or_postcode">Suche nach Ort oder PLZ</string>
+    <string name="sliderh_text1">Dein Style\nin einer App!</string>
+    <string name="sliderb_text1">Nur ein paar Klicks\nund du bist startklar!</string>
+    <string name="sliderh_text2">Finde die besten\nSalons in deiner\nNähe!</string>
+    <string name="sliderb_text2">Teile deinen Standortmit uns\nund wir finden für dich die\nbesten Salons in deiner\nUmgebung!</string>
+    <string name="sliderh_text3">Verpasse keinen\nTermin mehr!</string>
+    <string name="sliderb_text3">Lass\' dich einfach an deine\nTermine erinnern und werde\nstets über Änderungen zu\ndeiner Buchung informiert!</string>
+    <string name="sliderh_text4">Super,\nlos geht\'s!</string>
+    <string name="sliderb_text4">Wir sammeln Daten, um dein\nNutzererlebnis stetig zu\nverbessern. Mehr dazu\nerfährst du <font fgcolor='#E9744E'><u>hier</u></font>.</string>
+<!--
+    <string name="sliderb_text4">Mehr dazu erfährst du <font fgcolor='#E9744E'><u>hier</u></font>.</string>
+-->
+    <string name="delete_this_account">Account löschen</string>
+ <string name="enter_otp">Geben Sie OTP ein</string>
+
+    <string name="submit">Absenden</string>
+    <!--<string name="resend_otp"><u>Senden Sie OTP erneut</u></string>-->
+    <string name="resend_otp"><u>Code erneut senden</u></string>
+    <string name="resend_account_activation_mail"><u>E-Mail mit Kontoaktivierungslink erneut senden</u></string>
+    <string name="are_you_sure_account_delete">Du möchtest dein Konto löschen.
+Diese Aktion ist irreversibel.</string>
+    <string name="confirmation1">Bist du sicher?</string>
+    <string name="confirmation">Bestätigung!</string>
+    <string name="are_you_sure_want_to_logout">Are you sure want to logout?</string>
+    <string name="enter_four_digit_code">\"Geben Sie einen 4-stelligen Code ein, der an Ihre E-Mail-ID gesendet wird. \"</string>
+    <string name="invalid_otp">Code ungültig</string>
+    <string name="otp_not_empty">OTP darf nicht leer sein!</string>
+    <string name="hier"><u>hier</u></string>
+    <string name="add_to_my_calendar">In Kalender eintragen</string>
+    <array name="auto_size_text_sizes">
+        <item>16sp</item>
+        <item>18sp</item>
+        <item>20sp</item>
+        <item>22sp</item>
+        <item>24sp</item>
+    </array>
+
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="DetailModel"
+            type="com.si.styletimer.models.salonDetails.SalonDetailModel" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/rlll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.SalonDetailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:layout_above="@+id/bottom12">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_220"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="#00949D"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbar"
+                android:background="@android:color/white">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:id="@+id/nestedview"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:layout_gravity="fill_vertical"
+                    android:fitsSystemWindows="true"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_24">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/ivsalon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/no_image_available1" />
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/view_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_38"
+                                android:layout_height="@dimen/dp_38"
+                                android:src="@drawable/ic_circle_ripple"
+                                android:background="@drawable/ic_back_round"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:tint="@color/colorAccent"
+                                android:id="@+id/ivBack"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/helvetica"
+                                android:layout_marginStart="@dimen/dp_6"
+                                android:layout_marginEnd="@dimen/dp_6"
+                                android:textColor="@color/white"
+                                android:id="@+id/tvHeading"
+                                android:text="@{DetailModel.businessName}"
+                                android:animateLayoutChanges="true"/>
+
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_38"
+                                android:layout_height="@dimen/dp_38"
+                                android:src="@drawable/ic_share"
+                                android:id="@+id/ivShare"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </androidx.appcompat.widget.Toolbar>
+                <RelativeLayout
+                    android:id="@+id/rlShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_alignParentBottom="true"
+                        android:background="#CDCDCD"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            android:id="@+id/Detail"
+            layout="@layout/detail_cell" />
+
+        <include
+            android:id="@+id/loader"
+            layout="@layout/loader"
+            android:visibility="gone" />
+
+<!--
+        <include layout="@layout/check_availability_btn_layout"
+            android:id="@+id/bottomSheetCheckAvailability"
+            />
+-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <RelativeLayout
+            android:id="@+id/bottom12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/seprator"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/v"
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/dp_10">
+                <RelativeLayout
+                    android:layout_margin="@dimen/dp_20"
+                    android:id="@+id/btncheckavailability"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:background="@drawable/btn_addtocart"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/helvetica"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/check_availability"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvitemcount"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:background="@drawable/back_circle"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#FF9944"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

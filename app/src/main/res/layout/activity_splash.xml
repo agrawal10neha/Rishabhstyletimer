@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.Splash">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00B3BE" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_202"
+            android:layout_height="@dimen/dp_202"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_main_logo"
+            android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/dp_270"
+            android:layout_height="@dimen/dp_270"
+
+            android:src="@drawable/splash_client_logo" />
+
+        <TextView
+            android:id="@+id/tvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_36"
+            android:textColor="@color/white"
+            android:layout_below="@+id/iv"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sqaref"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="Dein Style"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_26"
+            android:textColor="@color/white"
+            android:layout_below="@+id/tvv"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sqaref"
+            android:text="in einer App!"/>
+    </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

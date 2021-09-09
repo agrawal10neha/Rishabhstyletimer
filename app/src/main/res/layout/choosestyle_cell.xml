@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="ChooseStyleModel"
+            type="com.si.styletimer.models.ChooseStyleModel" />
+    </data>
+
+    <LinearLayout
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMain">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlpictext"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivstylerimage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_back"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/rltxtname"
+                            android:background="@drawable/back_choose_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textSize="16.16sp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:text="D"
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvfname"
+                                    />
+
+                                <TextView
+                                    android:layout_toEndOf="@+id/tvfname"
+                                    android:textColor="@color/white"
+                                    android:text="D"
+                                    android:textSize="16.16sp"
+                                    android:fontFamily="@font/helvetica"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvlanme"
+                                   android:visibility="gone" />
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ivright"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llfirstavailable"
+                        android:layout_alignParentStart="true"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/helvetica"
+                            android:id="@+id/tvstylename"
+                            android:text=""
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="#212121"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:fontFamily="@font/helvetica"
+                            android:id="@+id/tvText"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="14.2sp"
+                            android:textColor="@color/font_grey"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ffff"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlstyler"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/helvetica"
+                            android:id="@+id/tvstylenametwo"
+                            android:text=""
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="#212121"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_toStartOf="@+id/ivstar"
+                            android:hint="0.0"
+                            android:text="@{ChooseStyleModel.rating}"
+                            android:fontFamily="@font/helvetica"
+                            android:textColor="#FFFF9944"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+
+                        <ImageView
+                            android:id="@+id/ivstar"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:src="@drawable/ic_star_filled"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/seprator"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:id="@+id/View"/>
+
+    </LinearLayout>
+
+</layout>

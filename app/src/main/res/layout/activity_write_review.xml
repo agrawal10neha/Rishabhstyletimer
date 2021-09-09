@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/rllllll"
+        android:background="@color/white"
+        tools:context=".activity.WriteReviewActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/rltool"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:elevation="@dimen/dp_5"
+            android:background="@color/colorPrimaryDark">
+
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/ic_back_round"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_circle_ripple"
+                android:tint="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_toRightOf="@+id/ivClose"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/rate_and_review"
+                android:textColor="@android:color/white"
+                android:textSize="20.2sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlRating"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                android:fillViewport="true"
+                android:layout_above="@+id/cvButton"
+                android:id="@+id/nesssss"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:fontFamily="@font/helvetica"
+                        android:text="@string/rate_your_overall_experience"
+                        android:textColor="@color/font_black"
+                        android:textSize="16.6sp" />
+
+                    <RatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:clickable="true"
+                        android:numStars="5"
+                        android:rating="0"
+                        android:scaleX=".5"
+                        android:scaleY=".5"
+                        android:stepSize="1"
+                        android:theme="@style/RatingBar"
+                        android:transformPivotX="0dp"
+                        android:transformPivotY="0dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ilReview"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/write_review"
+                        app:boxStrokeColor="@color/blue"
+                        app:hintTextAppearance="@style/EditTextHintStyle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etReview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica"
+                            android:gravity="top"
+                            android:minHeight="@dimen/dp_150"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/font_grey"
+                            android:textColorHint="@color/font_grey"
+                            android:textSize="16.16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbanonymous"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:fontFamily="@font/helvetica"
+                        android:text="@string/review_as_anonymous"
+                        android:textColor="@color/font_grey" />
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:cardElevation="@dimen/dp_10"
+                android:id="@+id/cvButton">
+
+                <Button
+                    android:layout_margin="@dimen/dp_20"
+                    android:id="@+id/btNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_login_gradient"
+                    android:gravity="center"
+                    android:text="@string/submit_review"
+                    android:textColor="@android:color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>
+

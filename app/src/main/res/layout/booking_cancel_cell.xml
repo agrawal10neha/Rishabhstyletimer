@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout><data><variable
+    name="CancelModel"
+    type="com.si.styletimer.models.mybooking_list_model.cancelled_booking_model.CancelModel"></variable></data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:padding="@dimen/dp_16"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/bg_salon_detail_menu"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="WED, MAR 1 / 13:30"
+                android:textColor="#696969"
+                android:textSize="14.14sp"
+                android:id="@+id/tvDate"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/helvetica_bold"
+                android:text="€22"
+                android:textColor="#696969"
+                android:textSize="16.16sp"
+                android:id="@+id/tvPrice"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Ladies’ Waxing - Hollywo…"
+            android:textColor="#212121"
+            android:textSize="24.29sp"
+            android:id="@+id/tvName"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:fontFamily="@font/helvetica"
+            android:text="There’re many variations of passages of lorem ipsum available."
+            android:textColor="#696969"
+            android:textSize="14.2sp"
+            android:id="@+id/tvAddress"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:fontFamily="@font/helvetica"
+            android:text="REBOOK"
+            android:paddingTop="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:textColor="#FD7C5D"
+            android:textSize="14.14sp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/tvRebook"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

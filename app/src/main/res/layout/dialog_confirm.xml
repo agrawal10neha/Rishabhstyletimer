@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:cardCornerRadius="@dimen/dp_30">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp_5"
+                android:layout_margin="@dimen/dp_16"
+                android:src="@drawable/ic_cross_circle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_20">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:padding="@dimen/dp_6"
+                    android:src="@drawable/confirm_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/helvetica"
+                    android:text="@string/thank_you_two"
+                    android:textColor="#212121"
+                    android:textSize="20sp"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:id="@+id/tvsub"
+                    android:layout_width="@dimen/dp_280"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/helvetica"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="@dimen/dp_2"
+                    android:text="Thank you"
+                    android:textColor="#696969"
+                    android:textSize="16sp"
+                    android:includeFontPadding="false"/>
+
+
+                <Button
+                    android:id="@+id/btngohome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@drawable/btn_addtocart"
+                    android:text="Zu deiner Buchung"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,9 @@
+credentials for google developer should be:
+
+gmail and firebase
+styletimer.testmail@gmail.com
+StyleAdmin136!
+
+Facebook Credentials:
+id:  aon03@web.dslt
+Pw:StyleAdmin135!

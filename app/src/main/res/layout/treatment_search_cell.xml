@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout><data>
+    <variable
+        name="TreatmentSearchModel"
+        type="com.si.styletimer.models.search_treatment_model.TreatmentSearchModel"/>
+</data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:gravity="center_vertical"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:id="@+id/llTreatment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="Haircuts &amp; Hairdressing"
+        android:paddingLeft="@dimen/dp_16"
+        android:id="@+id/tvName"
+        android:fontFamily="@font/helvetica"
+        android:textSize="16sp"/>
+
+</LinearLayout>
+</layout>

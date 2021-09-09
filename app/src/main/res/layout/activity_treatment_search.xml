@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.TreatmentSearchActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="@dimen/dp_5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:src="@drawable/ic_close"
+            android:id="@+id/ivClose"/>
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_toRightOf="@+id/ivClose"
+            android:layout_centerVertical="true"
+            android:hint="Behandlung suchen"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20.2sp"
+            android:fontFamily="@font/helvetica_regular"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_60"/>
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_cross_circletwo"
+            android:id="@+id/ivClear"
+            android:tint="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvSearch"
+            android:visibility="gone"/>
+
+       <TextView
+           android:id="@+id/tvNoList"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:text="Leider konnten wir kein passendes\nErgebnis für , finden"
+           android:textSize="16sp"
+           android:textColor="@color/font_black"
+           android:paddingEnd="@dimen/dp_32"
+           android:paddingStart="@dimen/dp_32"
+           android:fontFamily="@font/helvetica_regular"
+           android:gravity="center"
+           android:layout_marginBottom="@dimen/dp_220"
+           android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+</layout>

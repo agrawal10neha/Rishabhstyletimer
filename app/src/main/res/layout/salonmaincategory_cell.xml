@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="com.si.styletimer.retrofit.RetrofitServices" />
+        <variable
+            name="SalonMainCategoryModel"
+            type="com.si.styletimer.models.salonDetails.SalonMainCategoryModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/llAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_8"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:cardElevation="@dimen/dp_5">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layyout"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_salon_detail_menu"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_85"
+                android:layout_height="@dimen/dp_80">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginStart="@dimen/dp_5">
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica"
+                        android:hint=""
+                        android:gravity="center"
+                        android:text="@{SalonMainCategoryModel.categoryName}"
+                        android:textColor="#212121"
+                        android:textSize="12sp"
+                        android:layout_toStartOf="@+id/ivRight"/>
+
+                    <ImageView
+                        android:id="@+id/ivRight"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="@dimen/dp_12"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_right"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivcat"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_all" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

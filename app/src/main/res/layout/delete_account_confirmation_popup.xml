@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp_16"
+    android:elevation="@dimen/dp_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/llOther">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20.2sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/font_black"
+                android:text="@string/cancel_booking"
+                android:textStyle="bold"
+                android:id="@+id/head"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_24"/>
+
+            <ImageView
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:src="@drawable/ic_cross_circle"
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/dp_10"
+                android:id="@+id/icClose"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/helvetica"
+            android:textSize="16.16sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/font_grey"
+            android:id="@+id/sHead"
+            android:text="Please select reason why you want to cancel this booking."
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_24"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:fontFamily="@font/helvetica"
+                android:textStyle="bold"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/dp_4"
+                android:text="YES"
+
+                android:textColor="#FD7C5D"
+                android:textSize="20.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO"
+                android:fontFamily="@font/helvetica"
+                android:textSize="20.2sp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/dp_26"
+                android:padding="@dimen/dp_4"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textColor="#696969"
+                android:id="@+id/no"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

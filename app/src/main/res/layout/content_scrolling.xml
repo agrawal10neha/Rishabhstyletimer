@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.CategoryListingActivity"
+    tools:showIn="@layout/activity_category_listing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llList"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rladd"
+                android:layout_marginTop="@dimen/dp_13"
+                android:layout_marginBottom="7dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/rladd"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dp_10"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnAddsalon"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notlisteed"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llMap"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_25">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/dp_11">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Map move "
+                            android:textSize="14.2sp"
+                            android:textColor="@color/font_grey"
+                            android:fontFamily="@font/helvetica"/>
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mapCb"/>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/dp_16"
+                        android:elevation="@dimen/dp_5"
+                        android:layout_margin="@dimen/dp_16"
+                        android:visibility="gone"
+                        android:id="@+id/cvSalonDetail">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/dp_16"
+                            android:id="@+id/llMapMain">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="@dimen/dp_100"
+                                    android:layout_height="@dimen/dp_56"
+                                    app:cardCornerRadius="@dimen/dp_4"
+                                    android:elevation="@dimen/dp_4">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/ic_image"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="@dimen/dp_16">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Peaky’s Beauty Parlour"
+                                        android:textColor="@color/font_black"
+                                        android:textSize="16.16dp"
+                                        android:fontFamily="@font/helvetica"
+                                        android:id="@+id/tvName"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="2"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:text="107-109 Market Street,Westhoughton, Bolton"
+                                        android:textColor="@color/font_grey"
+                                        android:textSize="14.2dp"
+                                        android:fontFamily="@font/helvetica"
+                                        android:id="@+id/tvAddress"
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="@dimen/dp_6">
+
+                                        <RatingBar
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:numStars="5"
+                                            android:rating="2"
+                                            android:stepSize="1"
+                                            android:theme="@style/RatingBar"
+                                            style="?android:attr/ratingBarStyleSmall"
+                                            android:clickable="false"
+                                            android:focusable="false"
+                                            android:id="@+id/ratingSaloon"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/dp_10"
+                                            android:text="10 reviews"
+                                            android:textSize="12.12sp"
+                                            android:layout_gravity="center_vertical"
+                                            android:textColor="@color/font_grey"
+                                            android:fontFamily="@font/helvetica_regular"
+                                            android:id="@+id/tvReview"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rvSubCat">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_22"
+                                android:text="@string/show_all_services"
+                                android:layout_marginBottom="@dimen/dp_15"
+                                android:maxLines="1"
+                                android:textSize="16.16sp"
+                                android:paddingTop="@dimen/dp_10"
+                                android:paddingBottom="@dimen/dp_10"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/helvetica_regular"
+                                android:id="@+id/tvShowAll"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layoutNoData"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_list"
+            />
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="22sp"
+            android:fontFamily="@font/helvetica"
+            android:textColor="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salon_msg"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/btnAddsalontwo"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notlisteed"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

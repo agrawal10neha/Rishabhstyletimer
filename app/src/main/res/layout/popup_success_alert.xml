@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16">
+
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/ic_cross_circle" />
+
+            <ImageView
+                android:id="@+id/ivC"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/dp_8"
+                android:layout_centerInParent="true"
+                android:src="@drawable/calendar_cart" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:fontFamily="@font/helvetica_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dp_3"
+            android:text="@string/alert"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnconfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:layout_margin="@dimen/dp_16"
+            android:background="@drawable/btn_addtocart"
+            android:fontFamily="@font/helvetica"
+            android:text="@string/confirm_booking"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+</layout>

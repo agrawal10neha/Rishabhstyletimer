@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".activity.SettingActivity">
+
+        <RelativeLayout
+            android:id="@+id/rltool"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:elevation="@dimen/dp_5"
+            android:background="@color/colorPrimaryDark">
+
+
+            <ImageView
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/ic_circle_ripple"
+                android:background="@drawable/ic_back_round"
+                android:tint="@color/colorAccent"
+                android:id="@+id/ivClose"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_toRightOf="@+id/ivClose"
+                android:fontFamily="@font/helvetica"
+                android:text="Einstellungen"
+                android:textColor="@android:color/white"
+                android:textSize="20.2sp" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rltool"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:layout_above="@+id/llbottom"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llmybooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@drawable/ic_date_calander"
+                        android:tint="@color/font_grey"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:fontFamily="@font/helvetica"
+                        android:text="My Bookings"
+                        android:textColor="#696969"
+                        android:textSize="14.2sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llmyprofile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:padding="@dimen/dp_2"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@drawable/ic_user_outline" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:fontFamily="@font/helvetica"
+                        android:text="Mein Profil"
+                        android:textColor="#696969"
+                        android:textSize="14.2sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llupdatepassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:padding="@dimen/dp_2"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@drawable/ic_password_key" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:fontFamily="@font/helvetica"
+                        android:text="Passwort ändern"
+                        android:textColor="#696969"
+                        android:textSize="14.2sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llconditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:padding="@dimen/dp_4"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@drawable/ic_ccccccc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:fontFamily="@font/helvetica"
+                        android:text="Nutzungsbedingungen"
+                        android:textColor="#696969"
+                        android:textSize="14.2sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltermsofuse"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:padding="@dimen/dp_2"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@drawable/ic_tttttt" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:fontFamily="@font/helvetica"
+                        android:text="Datenschutzbestimmungen"
+                        android:textColor="#696969"
+                        android:textSize="14.2sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llImprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:padding="@dimen/dp_2"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:src="@drawable/ic_imprintt" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:fontFamily="@font/helvetica"
+                        android:text="Impressum"
+                        android:textColor="#696969"
+                        android:textSize="14.2sp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:text="Benachrichtigungen"
+                        android:textSize="16sp"
+                        android:textColor="@color/font_black"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv"
+                        android:layout_centerVertical="true"
+                        android:text="(Off)"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:id="@+id/tvStatus"
+                        android:visibility="gone"
+                        android:textColor="@color/red_error"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:id="@+id/sswitch"
+                        android:theme="@style/SCBSwitch"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:text="Erlaube Salons, dir E-Mails \nzu Services und \nTerminen zu senden"
+                        android:textSize="16sp"
+                        android:textColor="@color/font_black"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv2"
+                        android:layout_centerVertical="true"
+                        android:text="(Off)"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:id="@+id/tvSalonNewsLetters"
+                        android:visibility="gone"
+                        android:textColor="@color/red_error"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:id="@+id/SalonnewsLettersSwitch"
+                        android:theme="@style/SCBSwitch"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:text="Newsletter von styletimer\nerhalten"
+                        android:textSize="16sp"
+                        android:textColor="@color/font_black"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv1"
+                        android:layout_centerVertical="true"
+                        android:text="(Off)"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:id="@+id/tvNewsLetters"
+                        android:visibility="gone"
+                        android:textColor="@color/red_error"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:id="@+id/newsLettersSwitch"
+                        android:theme="@style/SCBSwitch"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/llbottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_165"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/btLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bg_logout"
+                android:gravity="center"
+                android:text="AUSLOGGEN"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:textColor="#696969" />
+
+            <TextView
+                android:id="@+id/tvDeleteAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:layout_gravity="center"
+                android:text="@string/delete_this_account"
+                android:layout_marginTop="@dimen/dp_22"
+                android:textColor="#696969"
+                android:textSize="14sp"
+                android:padding="@dimen/dp_6"
+                android:visibility="visible"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="copyright @styletime 2019 | all rights reserved"
+                android:textColor="#696969"
+                android:textSize="12.12sp"
+                android:gravity="center"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="@dimen/dp_8"
+                android:id="@+id/version"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DayTimePickActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:layout_marginBottom="@dimen/dp_65">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_56"
+                android:elevation="@dimen/dp_5"
+                android:background="@color/colorPrimaryDark">
+
+                <!--<ImageView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:src="@drawable/ic_back"
+                    android:padding="@dimen/dp_2"
+                    android:id="@+id/ivClose"/>-->
+
+                <ImageView
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_38"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/ic_circle_ripple"
+                    android:background="@drawable/ic_back_round"
+                    android:id="@+id/ivClose"
+                    android:layout_centerVertical="true"
+                    app:tint="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivClose"
+                    android:layout_centerVertical="true"
+                    android:text="@string/any_time"
+                    android:textColor="@color/white"
+                    android:textSize="20.2sp"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:layout_marginLeft="@dimen/dp_10"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_5"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_34"
+                    android:gravity="center_vertical"
+                    android:id="@+id/rlDate">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_grey"
+                        android:textSize="14.2sp"
+                        android:text="@string/date"
+                        android:fontFamily="@font/helvetica_regular"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/font_grey"
+                            android:textSize="14.2sp"
+                            android:text=""
+                            android:fontFamily="@font/helvetica_regular"
+                            android:id="@+id/tvDate"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/font_grey"
+                            android:textSize="14.2sp"
+                            android:text="@string/any_date"
+                            android:fontFamily="@font/helvetica_regular"
+                            android:id="@+id/tvAny"/>
+
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_close"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:id="@+id/ivCloseDate"
+                            android:visibility="gone"
+                            app:tint="@color/font_grey" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/llDate"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_4">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_32"
+                            android:layout_weight="1"
+                            android:text="@string/today"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/helvetica_regular"
+                            android:textSize="14.2sp"
+                            android:textColor="@color/font_black"
+                            android:id="@+id/btToday"
+                            android:background="@drawable/bg_cardview_border_blue"/>
+
+                        <View
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_25"/>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_32"
+                            android:layout_weight="1"
+                            android:text="@string/tomorrow"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/helvetica_regular"
+                            android:textSize="14.2sp"
+                            android:id="@+id/btTomorrow"
+                            android:textColor="@color/font_black"
+                            android:background="@drawable/bg_cardview_border_blue"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_weight="1"
+                        android:text="@string/choose_date"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/helvetica_regular"
+                        android:textSize="14.2sp"
+                        android:textColor="@color/font_black"
+                        android:id="@+id/btDate"
+                        android:background="@drawable/bg_cardview_border_blue"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rlCalendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:visibility="gone"
+                       >
+
+                        <CalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_34"
+                    android:gravity="center_vertical"
+                    android:id="@+id/rlTime">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_grey"
+                        android:textSize="14.2sp"
+                        android:text="@string/time"
+                        android:fontFamily="@font/helvetica_regular"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentEnd="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/font_grey"
+                            android:textSize="14.2sp"
+                            android:text=""
+                            android:fontFamily="@font/helvetica_regular"
+                            android:id="@+id/tvStart"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/font_grey"
+                            android:textSize="14.2sp"
+                            android:text="@string/any_time"
+                            android:fontFamily="@font/helvetica_regular"
+                            android:id="@+id/tvTo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/font_grey"
+                            android:textSize="14.2sp"
+                            android:text=""
+                            android:fontFamily="@font/helvetica_regular"
+                            android:id="@+id/tvEnd"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_close"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:id="@+id/ivCloseTime"
+                            android:visibility="gone"
+                            app:tint="@color/font_grey" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:elevation="@dimen/dp_5"
+                    android:id="@+id/cvTime"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <NumberPicker
+                                android:theme="@style/MyNumberPickerTheme"
+                                android:descendantFocusability="blocksDescendants"
+                                android:id="@+id/npStart"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/lit_blue"/>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <NumberPicker
+                                android:id="@+id/npEnd"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:theme="@style/MyNumberPickerTheme"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:descendantFocusability="blocksDescendants"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/btnDialogStartTime"
+                            android:layout_width="@dimen/dp_150"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:text="0:00"
+                            />
+
+                        <Button
+                            android:background="@null"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:id="@+id/btnDialogEndTime"
+                            android:layout_width="@dimen/dp_150"
+                            android:textAllCaps="false"
+                            android:layout_height="wrap_content"
+                            android:text="1:00"
+                            />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_5"
+        android:padding="@dimen/dp_16"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apply"
+                android:textColor="@android:color/white"
+                android:id="@+id/btApply"
+                android:layout_margin="@dimen/dp_16"
+                android:background="@drawable/bg_login_gradient"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+</layout>

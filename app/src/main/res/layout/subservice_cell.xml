@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="SubServiceModel"
+            type="com.si.styletimer.models.salonDetails.SalonSubServiceModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+       <!-- android:foreground="?attr/selectableItemBackgroundBorderless"-->
+        <LinearLayout
+            android:id="@+id/tttt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:background="@drawable/custom_refel_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvItemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_120"
+                    android:layout_toStartOf="@+id/llprice"
+                    android:fontFamily="@font/helvetica"
+                    android:hint=""
+                    android:textColor="#DE000000"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/tvitemmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvItemName"
+                    android:fontFamily="@font/helvetica"
+                    android:hint=""
+                    android:text="@{SubServiceModel.duration + ` Min.`}"
+                    android:textColor="#99000000"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/llprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toStartOf="@+id/lattt"
+                    android:gravity="center|right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvitemprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/helvetica"
+                        android:hint=""
+                        android:includeFontPadding="false"
+                        android:textColor="#DE000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvsaveupto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/helvetica"
+                        android:includeFontPadding="false"
+                        android:text=" "
+                        android:textColor="#00B3BE"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lattt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/btnservieitemadd"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:padding="@dimen/dp_7"
+                        android:src="@drawable/ic_add_circle"/>
+                   <!-- android:background="@drawable/ic_circle_ripple"-->
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

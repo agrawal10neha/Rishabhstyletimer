@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/llOther">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20.2sp"
+                android:textColor="@color/font_black"
+                android:text="Darf styletimer deinen Standort verwenden?"
+                android:id="@+id/head"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_24"/>
+
+            <ImageView
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:src="@drawable/ic_cross_circle"
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/dp_10"
+                android:id="@+id/icClose1"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/helvetica"
+            android:textSize="16.16sp"
+            android:textColor="@color/font_grey"
+            android:id="@+id/sHead"
+            android:text="Wir verwenden deinen Stardort nur, um passende Salons und Angebote in deiner Gegend zu finden."
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beim verwenden der App erlauben"
+            android:fontFamily="@font/helvetica"
+            android:textSize="14.14sp"
+            android:layout_marginStart="@dimen/dp_24"
+            android:textColor="#FD7C5D"
+            android:id="@+id/yesApp1"
+            android:padding="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_20"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Einmal erlauben"
+                android:fontFamily="@font/helvetica"
+                android:textSize="14.14sp"
+                android:layout_marginStart="@dimen/dp_24"
+                android:textColor="#FD7C5D"
+                android:id="@+id/yes1"
+                android:padding="@dimen/dp_4"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nicht erlauben"
+                android:fontFamily="@font/helvetica"
+                android:textSize="14.14sp"
+                android:layout_marginStart="@dimen/dp_24"
+                android:textColor="#696969"
+                android:id="@+id/no1"
+                android:padding="@dimen/dp_4"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout><data></data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ForgotActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/llForgotMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:elevation="@dimen/dp_5"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:padding="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:src="@drawable/ic_close"
+            android:id="@+id/ivClose"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:text="@string/reset_your_password"
+            android:textColor="@android:color/white"
+            android:textSize="20.2sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/forgot_your_password"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:lineHeight="@dimen/dp_24"
+            android:text="@string/enter_your_email_amp_will_send_you_a_link_nto_reset_your_password"
+            android:textSize="16.16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_96"
+            android:layout_marginTop="@dimen/dp_30">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/email"
+                android:id="@+id/tiEmail"
+                app:hintTextAppearance="@style/EditTextHintStyle"
+                app:boxStrokeColor="@color/blue"
+                app:hintEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etEmail"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:id="@+id/btNext"
+            android:background="@drawable/bg_login_gradient"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

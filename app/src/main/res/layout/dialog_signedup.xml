@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_300"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_thankyou"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_150"
+                android:textColor="#e6e9ed"
+                android:fontFamily="@font/helvetica"
+                android:textSize="42sp"
+                android:gravity="center"
+                android:text="Super!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_16"
+            android:lineHeight="@dimen/dp_27"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:fontFamily="@font/helvetica_bold"
+            android:textSize="18sp"
+            android:text="@string/your_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:lineHeight="@dimen/dp_18"
+            android:textAlignment="center"
+            android:textColor="#666666"
+            android:fontFamily="@font/helvetica_regular"
+            android:textSize="12sp"
+            android:text="@string/click_on_the_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/resend_account_activation_mail"
+            android:textColor="@color/orange"
+            android:layout_marginTop="@dimen/dp_16"
+            android:gravity="center"
+            android:padding="@dimen/dp_4"
+            android:textAlignment="center"
+            android:id="@+id/tvResendMail"
+            android:visibility="visible"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        <Button
+            android:layout_marginTop="@dimen/dp_16"
+            android:id="@+id/btSignup"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_login_gradient"
+            android:text="Einloggen"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</layout>

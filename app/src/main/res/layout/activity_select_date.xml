@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".activity.SelectDateActivity">
+
+        <LinearLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:elevation="@dimen/dp_5"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/ic_circle_ripple"
+                android:background="@drawable/ic_back_round"
+                android:tint="@color/colorAccent"
+                android:id="@+id/ivClose"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tvheadname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="@string/choose_your_stylist"
+                android:textColor="@android:color/white"
+                android:textSize="20.2sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llcalendar"
+            android:layout_below="@+id/tool"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWeekCalendat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <View
+                android:id="@+id/viewone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C4C4C4"/>
+
+
+        </LinearLayout>
+
+        <noman.weekcalendar.WeekCalendar
+            android:visibility="gone"
+            xmlns:week="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/weekCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/tool"
+            week:dayNameLength="threeLetters"
+            week:daysBackgroundColor="#FFFFFF"
+            week:daysTextSize="14.14sp"
+            week:weekTextSize="14.14sp"
+            week:daysTextColor="#696969"
+            week:numOfPages="9"
+            week:selectedBgColor="#E9744E"
+            week:todaysDateBgColor="#E9744E"
+            week:weekBackgroundColor="#FFFFFF"
+            week:weekTextColor="#696969"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="@dimen/dp_16"
+            android:layout_above="@+id/cardtwo"
+            android:id="@+id/recyemployetime"
+            android:layout_below="@+id/llcalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardtwo"
+            app:cardElevation="@dimen/dp_10"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btncontinue"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@drawable/btn_addtocart"
+                android:layout_width="match_parent"
+                android:text="@string/continue1"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/helvetica"
+                android:layout_height="wrap_content" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_margin="@dimen/dp_16"
+            android:textColor="#696969"
+            android:fontFamily="@font/helvetica"
+            android:textSize="18sp"
+            android:id="@+id/tvnolist"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineHeight="@dimen/dp_20"
+            android:text="Leider sind am ausgewählten Tag keine Termine verfügbar."
+            />
+        <TextView
+            android:layout_below="@+id/tvnolist"
+            android:layout_margin="@dimen/dp_16"
+            android:textColor="#696969"
+            android:fontFamily="@font/helvetica"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:id="@+id/tvnolistPlease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bitte wähle einen anderen Tag" />
+
+        <include layout="@layout/loader"
+            android:id="@+id/loader"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+</layout>

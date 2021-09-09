@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="Review"
+            type="com.si.styletimer.models.showdatarating.Review" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="0.5"
+                android:scaleX="1.4"
+                android:scaleY="1.4"
+                android:theme="@style/RatingBar"
+                android:layout_marginStart="@dimen/dp_16"/>
+
+            <TextView
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ratingbar"
+                android:fontFamily="@font/helvetica"
+                android:text="(4)"
+                android:id="@+id/tvCount"
+                android:textColor="#696969"
+                android:textSize="12.12sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/helvetica"
+                android:text="04/20/2019"
+                android:textColor="#99000000"
+                android:textSize="12.12sp"
+                android:id="@+id/tvDate"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/helvetica"
+            android:textColor="#696969"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:id="@+id/tvReview"/>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTreatedBy"
+                android:hint="Treadted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#696969"
+                android:textSize="14.2sp"
+                />
+
+           <!-- <TextView
+                android:hint="&#45;&#45;&#45;&#45;"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#696969"
+                android:textSize="14.2sp"
+                />
+-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:hint=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#696969"
+                    android:textSize="14.2sp"
+                    android:id="@+id/tvName"/>
+
+                <ImageView
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/ticktickkkkk"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_7"
+                    android:layout_height="@dimen/dp_7"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:src="@drawable/ic_dot" />
+
+                <TextView
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:hint=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#696969"
+                    android:textSize="14.2sp"
+                    android:id="@+id/tvdaysago"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvBookedService"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="#696969"
+            android:textSize="14.2sp"
+            />
+
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout><data>
+    <variable
+        name="MapSubCatListModel"
+        type="com.si.styletimer.models.mapListmodel.MapSubCatListModel"/>
+</data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_22">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="@dimen/dp_225"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"
+            android:text="Ladies’ Waxing - Face"
+            android:maxLines="2"
+            android:textSize="16.16sp"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/helvetica"
+            android:id="@+id/tvCatName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from €6"
+            android:maxLines="1"
+            android:textSize="14.2sp"
+            android:textColor="@color/font_black"
+            android:fontFamily="@font/helvetica"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tvCatPrice"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Min"
+            android:maxLines="1"
+            android:textSize="12.12sp"
+            android:textColor="@color/font_grey"
+            android:fontFamily="@font/helvetica"
+            android:id="@+id/tvCatDistance"
+            android:layout_below="@+id/tvCatName"/>
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/tvsaveupto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:text="Save "
+            android:textColor="#00B3BE"
+            android:textSize="14.2sp"
+            android:layout_below="@+id/tvCatPrice"/>
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/tvsaveupto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:text="Save "
+            android:textColor="#00B3BE"
+            android:textSize="14.2sp" />
+    </RelativeLayout>-->
+
+
+
+</LinearLayout>
+</layout>

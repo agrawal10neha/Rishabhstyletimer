@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="SalonMatchcatsubcatModel"
+            type="com.si.styletimer.models.salonDetails.SalonMatchcatsubcatModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- android:foreground="?attr/selectableItemBackgroundBorderless"-->
+     <!--   android:background="@drawable/custom_refel_bg"-->
+        <LinearLayout
+            android:id="@+id/tttt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_refel_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvitemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_140"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:hint=""
+                    android:text="@{SalonMatchcatsubcatModel.key}"
+                    android:textColor="#DE000000"
+                    android:textSize="14sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvitemname"
+                    android:layout_marginEnd="@dimen/dp_120">
+
+                    <TextView
+                        android:id="@+id/tvitemmin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica"
+                        android:hint=""
+                        android:textColor="#99000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvShowDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_toEndOf="@+id/tvitemmin"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingStart="@dimen/dp_4"
+                        android:paddingEnd="@dimen/dp_4"
+                        android:drawableEnd="@drawable/ic_info"
+                        android:drawablePadding="@dimen/dp_4"
+                        android:fontFamily="@font/helvetica"
+                        android:text="@string/show_details"
+                        android:textColor="#00B3BE"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/llprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|right"
+                    android:layout_toStartOf="@+id/lattt"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:drawableStart="@drawable/ic_right_new"
+                    android:drawablePadding="@dimen/dp_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/orange"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llpriceshowhide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_toStartOf="@+id/lattt"
+                    android:gravity="center|right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvitemprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center|right"
+                        android:hint=""
+                        android:includeFontPadding="false"
+                        android:textColor="#DE000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvsaveupto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/helvetica"
+                        android:drawableEnd="@drawable/ic_info"
+                        android:hint=""
+                        android:textColor="#00B3BE"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/lattt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/btnservieitemadd"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:padding="@dimen/dp_7"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_add_circle"
+                        android:visibility="gone"/>
+                  <!--  android:background="@drawable/ic_circle_ripple"-->
+
+                    <ImageView
+                        android:id="@+id/drop"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:rotation="270"
+                        android:padding="@dimen/dp_7"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recymainservice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tttt"
+            android:visibility="gone" />
+<!--
+        <View
+            android:layout_below="@+id/recymainservice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/seprator"
+            android:layout_marginBottom="@dimen/dp_16"/>
+-->
+
+    </RelativeLayout>
+</layout>

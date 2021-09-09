@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00949D</color>
+    <color name="colorPrimaryDark">#00949D</color>
+    <color name="colorAccent">#E9744E</color>
+
+    <color name="orange">#E9744E</color>
+    <color name="CIRCLE">#55939B</color>
+
+    <color name="font_grey">#696969</color>
+    <color name="font_grey_dark">#666666</color>
+    <color name="font_grey_light">#999999</color>
+    <color name="font_black">#212121</color>
+
+    <color name="blue">#00B3BE</color>
+    <color name="gren">#4BF153</color>
+    <color name="red_error">#D00000</color>
+    <color name="lit_blue">#CCF0F2</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="star_unselected">#999999</color>
+    <color name="star_selected">#E9744E</color>
+    <color name="new_orange">#FF9944</color>
+    <color name="new_red">#FC6076</color>
+    <color name="new_gren">#4BB543</color>
+
+    <!--<color name="seprator">#D1D1D1</color>-->
+    <color name="seprator">#66DFDEDE</color>
+    <color name="seprator3">#E6DFDEDE</color>
+    <color name="seprator2">#E4DFDEDE</color>
+    <color name="disableDay">#E4DFDEDE</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="grayLight">#ECECEC</color>
+
+</resources>

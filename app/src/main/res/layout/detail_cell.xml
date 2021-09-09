@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"><data><variable
+    name="DetailModel"
+    type="com.si.styletimer.models.salonDetails.SalonDetailModel" /></data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_salon_detail"
+    tools:context=".activity.SalonDetailActivity"
+    android:orientation="vertical"
+    android:fillViewport="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"
+                    android:id="@+id/llVenue"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/tvsalonname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:clickable="false"
+                        android:fontFamily="@font/helvetica"
+                        android:hint=""
+                        android:text="@{DetailModel.businessName}"
+                        android:textColor="#DE000000"
+                        android:textSize="24.92sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="false">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false">
+
+                            <TextView
+                                android:clickable="false"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:id="@+id/tvsalonaddress"
+                                android:layout_width="@dimen/dp_225"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/helvetica"
+                                android:lineSpacingExtra="@dimen/dp_3"
+                                android:hint=""
+                                android:text="@{DetailModel.address+`\n`+DetailModel.zip+` `+DetailModel.city}"
+                                android:textColor="#99000000"
+                                android:textSize="14.2sp" />
+
+                            <TextView
+                                android:clickable="false"
+                                android:includeFontPadding="false"
+                                android:id="@+id/tvVenueDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/helvetica"
+                                android:gravity="center|right"
+                                android:text="@string/venue_details"
+                                android:textColor="#00B3BE"
+                                android:textSize="16.16sp"
+                                android:padding="@dimen/dp_12"
+                                android:layout_marginRight="-9dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_12"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_12"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/tvreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_regular"
+                        android:gravity="center|left"
+                        android:hint=""
+                        android:textColor="#DE000000"
+                        android:layout_marginTop="2dp"
+                        android:textSize="42sp"
+                        android:includeFontPadding="false"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingbar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_toRightOf="@+id/tvreview"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:numStars="5"
+                        android:stepSize="0.5"
+                        android:scaleX="1.3"
+                        android:scaleY="1.3"
+                        android:rating="@{DetailModel.rateme()}"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:theme="@style/RatingBar" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ratingbar"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:layout_toRightOf="@+id/tvreview"
+                        android:fontFamily="@font/helvetica"
+                        android:hint=""
+                        android:text="@{DetailModel.totalReview+ ` Bewertungen`}"
+                        android:textColor="#99000000"
+                        android:textSize="14.2sp" />
+
+                    <ImageView
+                        android:id="@+id/ivfav"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_fav_border"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible"
+                        android:background="@drawable/ic_circle_ripple"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/seprator2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="@string/service_details"
+                    android:textColor="#696969"
+                    android:textSize="14.2sp"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recymainservice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/seprator2" />
+
+<!--
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:fontFamily="@font/helvetica"
+                    android:text="@string/full_menu"
+                    android:textColor="#696969"
+                    android:textSize="14.2sp"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"/>
+-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:id="@+id/recymenucategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingRight="@dimen/dp_16"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/seprator2"
+                    android:layout_marginTop="@dimen/dp_10"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyallservice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/catrecy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_5"/>
+
+           <!-- android:layout_marginBottom="@dimen/dp_80"
+                 android:layout_marginTop="@dimen/dp_10"-->
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+<!--
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/dp_10">
+
+            <RelativeLayout
+                android:layout_margin="@dimen/dp_20"
+                android:id="@+id/btncheckavailability"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:background="@drawable/btn_addtocart"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/helvetica"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/check_availability"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvitemcount"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:background="@drawable/back_circle"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#FF9944"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+-->
+
+</RelativeLayout>
+</layout>

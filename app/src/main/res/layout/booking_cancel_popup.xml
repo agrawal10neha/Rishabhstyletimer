@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp_16"
+    android:elevation="@dimen/dp_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/llOther">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20.2sp"
+                android:textColor="@color/font_black"
+                android:text="@string/cancel_booking"
+                android:id="@+id/head"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingTop="@dimen/dp_24"/>
+
+            <ImageView
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:src="@drawable/ic_cross_circle"
+                android:padding="@dimen/dp_5"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/dp_10"
+                android:id="@+id/icClose"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/helvetica"
+            android:textSize="16.16sp"
+            android:textColor="@color/font_grey"
+            android:id="@+id/sHead"
+            android:text="Please select reason why you want to cancel this booking."
+            android:layout_marginLeft="@dimen/dp_24"
+            android:paddingRight="@dimen/dp_24"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_22"
+            android:id="@+id/rg"
+            android:checkedButton="@+id/other">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:text="@string/sick"
+                android:textColor="@color/font_grey"
+                android:paddingLeft="@dimen/dp_20"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:text="@string/no_time"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/font_grey"
+                android:paddingLeft="@dimen/dp_20"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:text="@string/booked_accidentally"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/font_grey"
+                android:paddingLeft="@dimen/dp_20"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:text="@string/other"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/font_grey"
+                android:paddingLeft="@dimen/dp_20"
+                android:id="@+id/other"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_17">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YES, CANCEL"
+                android:fontFamily="@font/helvetica"
+                android:textSize="14.14sp"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textColor="@color/font_grey"
+                android:id="@+id/yes"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO, CLOSE"
+                android:fontFamily="@font/helvetica"
+                android:textSize="14.14sp"
+                android:layout_marginLeft="@dimen/dp_26"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textColor="@color/orange"
+                android:id="@+id/no"/>
+
+            <Button
+                android:id="@+id/btCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_4"
+                android:background="@drawable/bg_login_gradient"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:visibility="gone"
+                android:textColor="@android:color/white"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlRating"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate your overall experience!"
+                android:textColor="@color/font_black"
+                android:textSize="16.6sp"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="@dimen/dp_16"/>
+
+            <RatingBar
+                android:theme="@style/RatingBar"
+                android:id="@+id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_gravity="left"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/dp_16"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Write review"
+                android:id="@+id/ilReview"
+                app:hintTextAppearance="@style/EditTextHintStyle"
+                app:boxStrokeColor="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_130"
+                    android:inputType="textMultiLine"
+                    android:id="@+id/etReview"
+                    android:gravity="top"
+                    android:textSize="16.16sp"
+                    android:fontFamily="@font/helvetica"
+                    android:textColor="@color/font_grey"
+                    android:textColorHint="@color/font_grey"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cbanonymous"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Review as Anonymous"
+                android:fontFamily="@font/helvetica"
+                android:textColor="@color/font_grey"
+                />
+
+            <Button
+                android:id="@+id/btSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:background="@drawable/bg_login_gradient"
+                android:gravity="center"
+                android:text="SUBMIT REVIEW"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/ic_close_black_"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:id="@+id/ivClose"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

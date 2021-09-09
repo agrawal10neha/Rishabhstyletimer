@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"><data></data>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:cardCornerRadius="@dimen/dp_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16">
+
+        <RelativeLayout
+            android:id="@+id/llSort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginBottom="@dimen/dp_6">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_sort" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/icSort"
+                    android:textSize="12.12sp"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:textColor="@color/font_black"
+                    android:text="@string/sort"
+                    android:layout_marginLeft="@dimen/dp_8"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12.12sp"
+                android:fontFamily="@font/helvetica_bold"
+                android:textColor="@color/font_grey"
+                android:text="@string/all"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:id="@+id/tvSorted"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@drawable/ic_max_price"
+                android:id="@+id/iv"
+                android:layout_marginTop="@dimen/dp_2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12.12sp"
+                android:layout_toRightOf="@+id/iv"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:fontFamily="@font/helvetica_bold"
+                android:textColor="@color/font_black"
+                android:text="@string/max_price"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12.12sp"
+                android:fontFamily="@font/helvetica_bold"
+                android:textColor="@color/font_grey"
+                android:layout_alignParentRight="true"
+                android:text="@string/any_price"
+                android:id="@+id/tvPrice"/>
+
+        </RelativeLayout>
+        <com.innovattic.rangeseekbar.RangeSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rsb_minRange="0"
+            app:rsb_max="1000"
+            app:rsb_trackColor="#B5B5B5"
+            app:rsb_trackSelectedColor="#E9744E"
+            app:rsb_maxThumbDrawable="@drawable/ic_oval"
+            app:rsb_minThumbDrawable="@drawable/ic_oval"
+          />
+
+<!--
+        <com.jaygoo.widget.RangeSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            app:rsb_indicator_background_color="#fff"
+            app:rsb_indicator_height="@dimen/dp_5"
+            app:rsb_indicator_radius="4dp"
+            app:rsb_indicator_show_mode="alwaysHide"
+            app:rsb_indicator_text_color="#333333"
+            app:rsb_indicator_width="@dimen/dp_10"
+            app:rsb_mode="range"
+            app:rsb_min="0"
+            app:rsb_max="1000"
+            app:rsb_progress_color="#E9744E"
+            app:rsb_progress_default_color="#B5B5B5"
+            app:rsb_progress_height="4dp"
+            app:rsb_thumb_drawable="@drawable/ic_oval"
+            app:rsb_thumb_scale_ratio="1"
+            app:rsb_tick_mark_gravity="center"
+            app:rsb_tick_mark_mode="number" />
+-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:id="@+id/icOffer"
+                android:src="@drawable/ic_percent"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icOffer"
+                android:textSize="12.12sp"
+                android:fontFamily="@font/helvetica_bold"
+                android:textColor="@color/font_black"
+                android:layout_centerVertical="true"
+                android:text="@string/express_offer_2_hours_or_less"
+                android:layout_marginLeft="@dimen/dp_8"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/Switch"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_56"
+            android:text="@string/apply_filters"
+            android:textColor="@android:color/white"
+            android:id="@+id/bt_apply"
+            android:background="@drawable/bg_login_gradient"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

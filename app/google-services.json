@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "988395884916",
+    "firebase_url": "https://style-timer.firebaseio.com",
+    "project_id": "style-timer",
+    "storage_bucket": "style-timer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988395884916:android:4518150f6c16112f",
+        "android_client_info": {
+          "package_name": "com.si.styletimer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988395884916-l00ias9n9mu1m8clfef68r6di59avfje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.si.styletimer",
+            "certificate_hash": "7689144ae6f8a5ed247e700e5c887c0f420a8dd0"
+          }
+        },
+        {
+          "client_id": "988395884916-jd5s3feronl727b404bki6f8ib66m5p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.si.styletimer",
+            "certificate_hash": "69923140da69b7f312436b3a260588f3d34b426a"
+          }
+        },
+        {
+          "client_id": "988395884916-mnqsvkhhn6p9m3iobiogulllk1sujju9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.si.styletimer",
+            "certificate_hash": "a4a5bb9ed7912e14d68195d284722ec0c4bc0a65"
+          }
+        },
+        {
+          "client_id": "988395884916-9tosvdfc4css71lefmjkasrgeckhjv0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMzs8cPvIXrY2yCN4dsUEyHR066i-H-uc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988395884916-igvb69qqc9vrbtc7mh5rqlk3p9dav78i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "988395884916-0l4q1qf58gfi0juqg5kml21uvj40429d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.si.styletimer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

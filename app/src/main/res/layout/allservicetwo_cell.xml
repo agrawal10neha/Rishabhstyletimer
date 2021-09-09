@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="AllServiceTwoModel"
+            type="com.si.styletimer.models.allservice.AllServiceTwoModel"/>
+    </data>
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/layountservice"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30">
+
+            <ImageView
+                android:id="@+id/ivDropdown"
+                android:rotation="270"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:layout_alignParentEnd="true"
+                />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:id="@+id/tvgroupname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/app_name"
+                android:text="string/app_name"
+                android:textColor="#DE000000"
+                android:textSize="16.16sp"
+                android:fontFamily="@font/helvetica"/>
+
+            <TextView
+                android:id="@+id/tvgroupcount"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tvgroupname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="00"
+                android:text="00"
+                android:textColor="#696969"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:textSize="12.12sp"
+                android:fontFamily="@font/helvetica"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_below="@+id/layountservice"
+            android:id="@+id/layoutsecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_26"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/recyallservicetwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</layout>
